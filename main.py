@@ -31,7 +31,7 @@ while True:
     try:
         for event in longpoll.listen():  # listen events
             if event.type == VkBotEventType.MESSAGE_NEW:  # if you received a message
-                if event.object.message['peer_id'] == event.object.message['from_id'] > 0:
+                if event.object.message['peer_id'] == event.object.message['from_id']:
                     """ if the message is from private messages """
 
                     command = event.obj.message["text"].lower()
